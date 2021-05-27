@@ -1,0 +1,68 @@
+{
+  "name": "@proeditor/local-client",
+  "version": "0.1.0",
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "build"
+  ],
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
+    "@monaco-editor/react": "3.7.5",
+    "@testing-library/jest-dom": "^5.11.10",
+    "@testing-library/react": "^11.2.6",
+    "@testing-library/user-event": "^12.8.3",
+    "@types/jest": "^26.0.22",
+    "@types/node": "^12.20.9",
+    "@types/prettier": "^2.2.3",
+    "@types/react": "^17.0.3",
+    "@types/react-dom": "^17.0.3",
+    "@types/react-redux": "7.1.15",
+    "@types/react-resizable": "^1.7.2",
+    "@uiw/react-md-editor": "2.1.1",
+    "axios": "0.21.1",
+    "bulmaswatch": "^0.8.1",
+    "esbuild": "0.8.26",
+    "esbuild-wasm": "0.8.27",
+    "immer": "^8.0.1",
+    "localforage": "^1.9.0",
+    "monaco-editor": "0.21.3",
+    "prettier": "^2.2.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-redux": "7.2.2",
+    "react-resizable": "^1.11.1",
+    "react-scripts": "4.0.3",
+    "redux": "4.0.5",
+    "redux-thunk": "2.3.0",
+    "typescript": "^4.2.4",
+    "web-vitals": "^1.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "prepublishOnly": "npm run build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
