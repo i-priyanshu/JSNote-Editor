@@ -11,7 +11,6 @@
   z-index: 20;
   opacity: 0;
   transition: opacity 0.3s;
-  cursor: pointer;
 }
 
 .editor-wrapper:hover .button-format {

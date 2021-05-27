@@ -1,15 +1,15 @@
-import "./resizable.css";
-import { useEffect, useState } from "react";
-import { ResizableBox, ResizableBoxProps } from "react-resizable";
+import './resizable.css';
+import { useEffect, useState } from 'react';
+import { ResizableBox, ResizableBoxProps } from 'react-resizable';
 
 interface ResizableProps {
-  direction: "horizontal" | "vertical";
+  direction: 'horizontal' | 'vertical';
 }
 
 const Resizable: React.FC<ResizableProps> = ({ direction, children }) => {
   let resizableProps: ResizableBoxProps;
-  const [innerHeight, setinnerHeight] = useState(window.innerHeight);
-  const [innerWidth, setinnerWidth] = useState(window.innerWidth);
+  const [innerHeight, setInnerHeight] = useState(window.innerHeight);
+  const [innerWidth, setInnerWidth] = useState(window.innerWidth);
   const [width, setWidth] = useState(window.innerWidth * 0.75);
 
   useEffect(() => {
@@ -19,41 +19,39 @@ const Resizable: React.FC<ResizableProps> = ({ direction, children }) => {
         clearTimeout(timer);
       }
       timer = setTimeout(() => {
-        setinnerHeight(window.innerHeight);
-        setinnerWidth(window.innerWidth);
+        setInnerHeight(window.innerHeight);
+        setInnerWidth(window.innerWidth);
         if (window.innerWidth * 0.75 < width) {
           setWidth(window.innerWidth * 0.75);
         }
       }, 100);
     };
-
-    window.addEventListener("resize", listener);
+    window.addEventListener('resize', listener);
 
     return () => {
-      window.removeEventListener("resize", listener);
+      window.removeEventListener('resize', listener);
     };
   }, [width]);
 
-  if (direction === "horizontal") {
+  if (direction === 'horizontal') {
     resizableProps = {
-      className: "resize-horizontal",
+      className: 'resize-horizontal',
       minConstraints: [innerWidth * 0.2, Infinity],
       maxConstraints: [innerWidth * 0.75, Infinity],
       height: Infinity,
-      width: width,
-      resizeHandles: ["e"],
+      width,
+      resizeHandles: ['e'],
       onResizeStop: (event, data) => {
         setWidth(data.size.width);
-        // console.log(data);
       },
     };
   } else {
     resizableProps = {
-      minConstraints: [Infinity, 50],
+      minConstraints: [Infinity, 24],
       maxConstraints: [Infinity, innerHeight * 0.9],
       height: 300,
       width: Infinity,
-      resizeHandles: ["s"],
+      resizeHandles: ['s'],
     };
   }
 

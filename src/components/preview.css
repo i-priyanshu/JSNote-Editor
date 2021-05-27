@@ -16,12 +16,12 @@
   color: red;
 }
 
-.react-draggable-transparent-selection .preview-wrapper::after {
-  content: "";
+.react-draggable-transparent-selection .preview-wrapper:after {
+  content: '';
   position: absolute;
   top: 0;
   right: 0;
-  left: 0;
   bottom: 0;
-  background-color: whitesmoke;
+  left: 0;
+  opacity: 0;
 }

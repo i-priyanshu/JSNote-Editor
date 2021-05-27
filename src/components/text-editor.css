@@ -14,7 +14,7 @@
 }
 
 .text-editor .w-md-editor-bar {
-  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAFAQMAAABo7865AAAABlBMVEVHcEzMzMzyAv2sAAAAAXRSTlMAQObYZgAAABBJREFUeF5jOAMEEAIEEFwAn3kMwcB6I2AAAAAASUVORK5CYII=");
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAFAQMAAABo7865AAAABlBMVEVHcEzMzMzyAv2sAAAAAXRSTlMAQObYZgAAABBJREFUeF5jOAMEEAIEEFwAn3kMwcB6I2AAAAAASUVORK5CYII=');
   height: 11px;
   cursor: row-resize;
   background-color: #37414b;
@@ -65,9 +65,4 @@
 
 .text-editor .token.list.punctuation {
   background-color: unset;
-}
-
-.text-editor .card-content {
-  border: 2px solid grey;
-  border-radius: 6px;
 }

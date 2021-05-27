@@ -1,8 +1,8 @@
-import "./text-editor.css";
-import { useState, useEffect, useRef } from "react";
-import MDEditor from "@uiw/react-md-editor";
-import { Cell } from "../State";
-import { useActions } from "../hooks/use-actions";
+import './text-editor.css';
+import { useState, useEffect, useRef } from 'react';
+import MDEditor from '@uiw/react-md-editor';
+import { Cell } from '../state';
+import { useActions } from '../hooks/use-actions';
 
 interface TextEditorProps {
   cell: Cell;
@@ -10,7 +10,7 @@ interface TextEditorProps {
 
 const TextEditor: React.FC<TextEditorProps> = ({ cell }) => {
   const ref = useRef<HTMLDivElement | null>(null);
-  const [editor, setEditor] = useState(false);
+  const [editing, setEditing] = useState(false);
   const { updateCell } = useActions();
 
   useEffect(() => {
@@ -20,35 +20,33 @@ const TextEditor: React.FC<TextEditorProps> = ({ cell }) => {
         event.target &&
         ref.current.contains(event.target as Node)
       ) {
-        console.log("elment clicked on is inside editor...");
         return;
       }
-      console.log("element clicked is not inside Editor");
 
-      setEditor(false);
+      setEditing(false);
     };
-    document.addEventListener("click", listener, { capture: true });
+    document.addEventListener('click', listener, { capture: true });
 
     return () => {
-      document.removeEventListener("click", listener, { capture: true });
+      document.removeEventListener('click', listener, { capture: true });
     };
   }, []);
 
-  if (editor) {
+  if (editing) {
     return (
       <div className="text-editor" ref={ref}>
         <MDEditor
           value={cell.content}
-          onChange={(v) => updateCell(cell.id, v || "")}
+          onChange={(v) => updateCell(cell.id, v || '')}
         />
       </div>
     );
   }
 
   return (
-    <div className="text-editor" onClick={() => setEditor(true)}>
+    <div className="text-editor card" onClick={() => setEditing(true)}>
       <div className="card-content">
-        <MDEditor.Markdown source={cell.content || "click to Edit"} />
+        <MDEditor.Markdown source={cell.content || 'Click to edit'} />
       </div>
     </div>
   );
