@@ -1,3 +1,11 @@
+<h1 align="center">JS Note Editor</h1>
+<p align="center">
+  
+</p>
+An online compiler made using ES-build webpack and various other technologies. It can install packages directly from the npm library and you can use it, in further code cells too.
+
+
+
 ## Project SnapShots 
 ![image](https://user-images.githubusercontent.com/70953098/119891561-bfbf2580-bf56-11eb-8d93-a61631af7786.png)
 ===
@@ -24,12 +32,5 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-
-
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Deployment
+- vercel 
