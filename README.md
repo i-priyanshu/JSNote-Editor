@@ -1,5 +1,6 @@
 <h1 align="center">JS Note Editor</h1>
 <p align="center">
+  <img src="https://socialify.git.ci/i-priyanshu/JSNote-Editor/image?description=1&descriptionEditable=%F0%9F%93%9DA%20React-Typescript%20Based%20Editor.&font=Raleway&issues=1&language=1&pattern=Floating%20Cogs&pulls=1&stargazers=1&theme=Dark" alt="JSNote-Editor" width="800" height="500" />
   
 </p>
 An online compiler made using ES-build webpack and various other technologies. It can install packages directly from the npm library and you can use it, in further code cells too.
